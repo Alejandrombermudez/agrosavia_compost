@@ -1,0 +1,17 @@
+# deps
+node_modules/
+.pnp
+.pnp.js
+
+# build
+.next/
+out/
+dist/
+
+# env — NUNCA subir estos al repositorio
+.env.local
+.env
+
+# misc
+.DS_Store
+*.pem
