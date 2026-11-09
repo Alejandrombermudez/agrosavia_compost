@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import type { Pila, PilaDetalle, ChartTab } from "@/types";
 import PilaSelector from "./PilaSelector";
@@ -44,16 +45,23 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-agro-blue text-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-agro-green flex items-center justify-center text-white font-black text-lg shrink-0">
-            C
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center gap-3 sm:gap-4">
+          <div className="shrink-0 rounded-lg bg-white px-2.5 py-1.5 sm:px-3 sm:py-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-agrosavia.png" alt="Agrosavia" className="h-4 w-auto sm:h-6" />
           </div>
-          <div>
-            <h1 className="text-lg font-bold leading-tight">
+          <div className="min-w-0">
+            <h1 className="truncate text-base sm:text-lg font-bold leading-tight">
               Monitoreo de Pilas de Compost
             </h1>
-            <p className="text-blue-200 text-xs">Agrosavia — Panel de estadísticas</p>
+            <p className="truncate text-blue-200 text-xs">Agrosavia — Panel de estadísticas</p>
           </div>
+          <Link
+            href="/planta"
+            className="ml-auto shrink-0 whitespace-nowrap rounded-full bg-agro-green px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold hover:bg-agro-green-dark transition"
+          >
+            Planta 3D
+          </Link>
         </div>
       </header>
 
